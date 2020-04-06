@@ -80,7 +80,7 @@
             "passWithNoTests": true
           }
         },
-        "deploy-netlify": {
+        "deploy": {
           "builder": "@netlify-builder/deploy:deploy",
           "options": {
             "outputPath": "dist/apps/bike-store",

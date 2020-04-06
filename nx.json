@@ -1,0 +1,30 @@
+{
+  "npmScope": "multi-markets",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "bike-store": {
+      "tags": []
+    },
+    "bike-store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["bike-store"]
+    }
+  }
+}

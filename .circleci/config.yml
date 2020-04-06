@@ -11,6 +11,7 @@ jobs:
           steps:
             - run: node --version
             - run: npm install
+            - run: yarn affected:build --base=<< pipeline.git.base_revision >> --head=HEAD
             - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD --netlifyToken=${NETLIFY_TOKEN}
 
 workflows:

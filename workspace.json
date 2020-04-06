@@ -79,6 +79,24 @@
             "tsConfig": "apps/bike-store/tsconfig.spec.json",
             "passWithNoTests": true
           }
+        },
+        "deploy-netlify": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/apps/bike-store",
+            "siteId": "537b5e78-6c27-40ba-8e01-5931676a6685"
+          }
+        },
+        "deploy-now": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "now --confirm"
+              }
+            ],
+            "cwd": "dist/apps/bike-store"
+          }
         }
       }
     },
@@ -187,6 +205,24 @@
             "jestConfig": "apps/car-store/jest.config.js",
             "tsConfig": "apps/car-store/tsconfig.spec.json",
             "passWithNoTests": true
+          }
+        },
+        "deploy-netlify": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/apps/car-store",
+            "siteId": "adcb16dd-e757-4115-8bc7-7260c555a9ff"
+          }
+        },
+        "deploy-now": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "now --confirm"
+              }
+            ],
+            "cwd": "dist/apps/car-store"
           }
         }
       }

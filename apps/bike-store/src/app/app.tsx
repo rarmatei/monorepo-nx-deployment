@@ -4,8 +4,15 @@ import './app.css';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
+import { Bike } from '@multi-markets/bike-interfaces';
 
 export const App = () => {
+  const mockBike: Bike = {
+    price: 900,
+    brand: 'Giant',
+    wheelSize: 24
+  };
+
   /*
    * Replace the elements below with your own.
    *
@@ -18,6 +25,7 @@ export const App = () => {
         <h1>Welcome to bike-store!</h1>
       </header>
       <main>
+        <p> The brand of the bike is: {mockBike.brand} </p>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
         <div className="flex github-star-container">

@@ -35,6 +35,9 @@
     },
     "bike-store-api": {
       "tags": []
+    },
+    "bike-interfaces": {
+      "tags": []
     }
   }
 }

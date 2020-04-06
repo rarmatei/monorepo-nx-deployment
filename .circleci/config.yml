@@ -9,9 +9,12 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run:
+              name: 'Print an env var stored in a Context'
+              command: echo ${NETLIFY_TOKEN}
             - run: npm install
-            - run: npm test
             - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD --netlifyToken=${NETLIFY_TOKEN}
+
 workflows:
   build-test-and-deploy:
     jobs:

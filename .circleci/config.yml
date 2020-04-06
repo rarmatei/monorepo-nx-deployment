@@ -9,7 +9,6 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: echo ${test1}
             - run: npm install
             - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD --netlifyToken=${NETLIFY_TOKEN}
 

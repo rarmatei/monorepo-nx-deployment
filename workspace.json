@@ -14,6 +14,8 @@
             "index": "apps/bike-store/src/index.html",
             "main": "apps/bike-store/src/main.tsx",
             "polyfills": "apps/bike-store/src/polyfills.ts",
+            "maxWorkers": 2,
+            "memoryLimit": 500,
             "tsConfig": "apps/bike-store/tsconfig.app.json",
             "assets": [
               "apps/bike-store/src/favicon.ico",
@@ -32,6 +34,7 @@
                 }
               ],
               "optimization": true,
+
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
@@ -140,6 +143,8 @@
           "options": {
             "outputPath": "dist/apps/car-store",
             "index": "apps/car-store/src/index.html",
+            "maxWorkers": 2,
+            "memoryLimit": 500,
             "main": "apps/car-store/src/main.tsx",
             "polyfills": "apps/car-store/src/polyfills.ts",
             "tsConfig": "apps/car-store/tsconfig.app.json",
@@ -281,6 +286,8 @@
           "builder": "@nrwl/node:build",
           "options": {
             "outputPath": "dist/apps/bike-store-api",
+            "maxWorkers": 2,
+            "memoryLimit": 500,
             "main": "apps/bike-store-api/src/main.ts",
             "tsConfig": "apps/bike-store-api/tsconfig.app.json",
             "assets": ["apps/bike-store-api/src/assets"]

@@ -27,7 +27,7 @@ export const App = () => {
       <main>
         <p> The new brand of the bike is: {mockBike.brand} </p>
         <h2>Resources &amp; Tools</h2>
-        <p>Thank you for using and showing some ♥ for Nx.10</p>
+        <p>Thank you for using and showing some ♥ for Nx.101</p>
         <div className="flex github-star-container">
           <a
             href="https://github.com/nrwl/nx"

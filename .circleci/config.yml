@@ -1,14 +1,15 @@
 version: 2.1
 orbs:
-  node: circleci/node@2.0.1
+  node: circleci/node@1.1.6
 jobs:
   build-test-and-deploy:
     executor:
       name: node/default
     steps:
       - checkout
-      - node:
+      - node/with-cache:
           steps:
+            - run: node --version
             - run: npm install
             - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD --netlifyToken=${NETLIFY_TOKEN}
 

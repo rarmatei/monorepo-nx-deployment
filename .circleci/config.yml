@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: echo "revision: ${pipeline.git.base_revision} curr: ${pipeline.git.revision}""
+            - run: echo "revision: << pipeline.git.base_revision >> curr: << pipeline.git.revision >> "
             - run: npm install
             - run: npm test
             - run: npm affected:deploy

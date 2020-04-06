@@ -25,6 +25,16 @@
     "bike-store-e2e": {
       "tags": [],
       "implicitDependencies": ["bike-store"]
+    },
+    "car-store": {
+      "tags": []
+    },
+    "car-store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["car-store"]
+    },
+    "bike-store-api": {
+      "tags": []
     }
   }
 }

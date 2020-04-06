@@ -224,6 +224,20 @@
             ],
             "cwd": "dist/apps/car-store"
           }
+        },
+        "pwd-project": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "pwd"
+              },
+              {
+                "command": "ls"
+              }
+            ],
+            "parallel": false
+          }
         }
       }
     },

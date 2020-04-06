@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: echo ${NETLIFY_TOKEN}
+            - run: echo ${CIRCLE_PROJECT_USERNAME}
             - run: npm install
             - run: yarn affected:deploy --base=<< pipeline.git.base_revision >> --head=HEAD --netlifyToken=${NETLIFY_TOKEN}
 
